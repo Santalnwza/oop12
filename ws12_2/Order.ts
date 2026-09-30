@@ -1,0 +1,17 @@
+export class Order {
+    constructor(
+        private id: number,
+        private productName: string,
+        private quantity: number,
+        private totalPrice: number
+    ) {}
+
+    public getId(): number { return this.id; }
+    public getProductName(): string { return this.productName; }
+    public getQuantity(): number { return this.quantity; }
+    public getTotalPrice(): number { return this.totalPrice; }
+
+    public getInfo(): string {
+        return `Order #${this.id}: ${this.productName} x ${this.quantity} | Total: ${this.totalPrice} Baht`;
+    }
+}
